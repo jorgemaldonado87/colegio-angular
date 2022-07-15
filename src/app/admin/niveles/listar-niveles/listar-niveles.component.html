@@ -1,0 +1,39 @@
+<!-- pagina para listar niveles  -->
+<div class="card header">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="card-title">Listar niveles</h3>
+      </div>
+      <div class="col-md-6 text-end">
+        <button class="btn btn-create success" [routerLink]="['/admin/niveles/crear-nivel']">CREAR NUEVO</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- tabla de niveles escolares, niveles tiene id, nombre -->
+<div class="card content">
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nivel of niveles">
+          <th scope="row">{{nivel.id}}</th>
+          <td>{{nivel.nombre}}</td>
+          <td class="text-end">
+            <button class="btn btn-primary me-1" (click)="editarNivel(nivel)">Editar</button>
+            <button class="btn btn-danger" (click)="eliminarNivel(nivel)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

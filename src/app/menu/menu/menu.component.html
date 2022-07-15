@@ -1,0 +1,87 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white " style="width: 100% ;height:100%">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-heart-fill"
+      viewBox="0 0 16 16">
+      <path
+        d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707L7.293 1.5Z" />
+      <path
+        d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9.293Zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z" />
+    </svg>
+    <span class="fs-4">Colegio APP</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/admin/dashboard']" [routerLinkActive]="['active']" aria-current="page">
+        <i class="bi-house"></i>
+        Inicio
+      </a>
+    </li>
+
+    <!-- cursos -->
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/admin/cursos']" [routerLinkActive]="['active']" aria-current="page">
+        <i class="bi-book"></i>
+        Cursos
+      </a>
+    </li>
+
+ <!-- materias -->
+ <li class="nav-item">
+  <a class="nav-link" [routerLink]="['/admin/materias']" [routerLinkActive]="['active']" aria-current="page">
+    <i class="bi-book"></i>
+    Materias
+  </a>
+</li>
+
+<!-- periodos -->
+<li class="nav-item">
+  <a class="nav-link" [routerLink]="['/admin/periodos']" [routerLinkActive]="['active']" aria-current="page">
+    <i class="bi-calendar"></i>
+    Periodos
+  </a>
+</li>
+
+    <!-- profesores -->
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/admin/profesores']" [routerLinkActive]="['active']" aria-current="page">
+        <i class="bi-people"></i>
+        Profesores
+      </a>
+    </li>
+
+    <!-- alumnos -->
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/admin/alumnos']" [routerLinkActive]="['active']" aria-current="page">
+        <i class="bi-people"></i>
+        Alumnos
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+  </ul>
+  <hr>
+  <div class="dropdown">
+    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+      <strong>{{user.name.split(' ')[0]}} {{user.lastname.split(' ')[0]}}</strong>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+      <li><a class="dropdown-item" href="#">New project...</a></li>
+      <li><a class="dropdown-item" href="#">Settings</a></li>
+      <li><a class="dropdown-item" href="#">Profile</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li><a class="dropdown-item" href="#">Sign out</a></li>
+    </ul>
+  </div>
+</div>

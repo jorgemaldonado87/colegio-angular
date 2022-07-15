@@ -1,0 +1,19 @@
+<!-- pagina para crear materia -->
+<!-- materia tiene nombre -->
+<div class="card header">
+  <div class="card-body">
+    <h3 class="card-title">Crear una nueva materia</h3>
+  </div>
+</div>
+
+<div class="card content">
+  <div class="card-body">
+    <form [formGroup]="crearMateriaForm" (ngSubmit)="crearMateria()"  >
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" formControlName="nombre" placeholder="Nombre">
+      </div>
+      <button type="submit" class="btn success float-end mt-2">Crear materia</button>
+    </form>
+  </div>
+</div>

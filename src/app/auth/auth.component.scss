@@ -1,0 +1,17 @@
+//setear .container-fluid a ancho 100% y alto 100%
+.container-fluid {
+  position: fixed;
+  background: #1F55AB;
+}
+html,
+body {
+  height: 100% !important;
+}
+
+
+.caja-contenido {
+  background: #fff;
+  border-radius: 5px;
+  min-height: 300px;
+}
+
